@@ -1,0 +1,25 @@
+.wp-block-marcvirtual-recipe ul.list-unstyled {
+  padding-left: 0;
+  list-style: none; }
+
+.wp-block-marcvirtual-recipe li {
+  margin: 0;
+  padding: 0; }
+
+.wp-block-marcvirtual-night-mode .night {
+  background-color: #333;
+  color: #ddd; }
+
+.wp-block-marcvirtual-media-upload .image-ctr {
+  position: relative; }
+
+.wp-block-marcvirtual-media-upload .btn-remove {
+  background-color: #FF564D;
+  padding: 5px 5px 0;
+  position: absolute;
+  top: 0;
+  left: 0; }
+  .wp-block-marcvirtual-media-upload .btn-remove svg {
+    background: red;
+    fill: white; }
+
