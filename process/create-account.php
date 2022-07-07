@@ -42,5 +42,4 @@ function recipe_create_account(){
 
     $output['status']       =   2;
     wp_send_json( $output );
-    
 }
