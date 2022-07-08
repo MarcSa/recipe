@@ -34,6 +34,7 @@ include( 'includes/shortcodes/creator.php' );
 include( 'process/submit-user-recipe.php' );
 include( 'includes/shortcodes/auth-form.php' );
 include( 'process/create-account.php' );
+include( 'process/login.php' );
 
 
 // Hooks
@@ -53,6 +54,7 @@ add_action( 'r_daily_recipe_hook', 'r_daily_generate_recipe' );
 add_action( 'wp_ajax_r_submit_user_recipe', 'r_submit_user_recipe' );
 add_action( 'wp_ajax_nopriv_r_submit_user_recipe', 'r_submit_user_recipe' );
 add_action( 'wp_ajax_nopriv_recipe_create_account', 'recipe_create_account' );
+add_action( 'wp_ajax_nopriv_recipe_user_login', 'recipe_user_login' );
 
 // Shortcodes
 add_shortcode( 'recipe_creator', 'r_recipe_creator_shortcode' );
