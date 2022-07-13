@@ -5,8 +5,10 @@ function r_recipe_auth_form_shortcode(){
     if ( is_user_logged_in() ){
         return '';
     }
-
-    $formHTML       =   file_get_contents('auth-form-template.php', true);
+    $auth_form_tpl_res         =   wp_remote_get( 
+        plugins_url( 'includes/shortcodes/auth-form-template.php', RECIPE_PLUGIN_URL )  
+    );
+    $formHTML       =   wp_remote_retrieve_body($auth_form_tpl_res);
 
     $formHTML       =   str_replace( 
         'NONCE_FIELD_PH',
