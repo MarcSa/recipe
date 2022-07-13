@@ -5,6 +5,9 @@ function r_activate_plugin(){
         wp_die( __('You must update Wordpress to use this plugin', 'recipe') );
     }
 
+    recipe_init();
+    flush_rewrite_rules();
+
     global $wpdb;
     
     $charset_collate = $wpdb->get_charset_collate();
