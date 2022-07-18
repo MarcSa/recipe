@@ -42,7 +42,6 @@ include( 'includes/shortcodes/twitter-follow.php' );
 include( 'includes/admin/menus.php' );
 include( 'includes/admin/options-page.php' );
 include( 'process/save-options.php' );
-include( 'includes/admin/settings-api.php' );
 
 
 // Hooks
