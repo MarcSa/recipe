@@ -41,6 +41,15 @@ function r_plugin_opts_page(){
                 </form>
             </div>
         </div>
+        <hr>
+        <form action="options.php" method="post">
+            <?php 
+                settings_fields( 'r_opts_group' );
+                do_settings_sections( 'r_opts_sections' );
+                submit_button();
+
+            ?>
+        </form>
     </div>
     <?php
 }
