@@ -44,6 +44,8 @@ include( 'includes/admin/options-page.php' );
 include( 'process/save-options.php' );
 include( 'includes/admin/origin-fields.php' );
 include( 'process/save-origin.php' );
+include( 'includes/notice.php' );
+include( 'process/remove-notice.php' );
 
 
 // Hooks
@@ -74,6 +76,8 @@ add_action( 'origin_add_form_fields', 'r_origin_add_form_fields' );
 add_action( 'origin_edit_form_fields', 'r_origin_edit_form_fields' );
 add_action( 'create_origin', 'r_save_origin_meta' );
 add_action( 'edited_origin', 'r_save_origin_meta' );
+add_action( 'admin_notices', 'r_admin_notices' );
+add_action( 'wp_ajax_r_dismiss_pending_recipe_notice', 'r_dismiss_pending_recipe_notice' );
 
 // Shortcodes
 add_shortcode( 'recipe_creator', 'r_recipe_creator_shortcode' );
