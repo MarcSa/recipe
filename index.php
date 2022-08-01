@@ -46,6 +46,7 @@ include( 'includes/admin/origin-fields.php' );
 include( 'process/save-origin.php' );
 include( 'includes/notice.php' );
 include( 'process/remove-notice.php' );
+include( 'includes/textdomain.php' );
 
 
 // Hooks
@@ -78,6 +79,7 @@ add_action( 'create_origin', 'r_save_origin_meta' );
 add_action( 'edited_origin', 'r_save_origin_meta' );
 add_action( 'admin_notices', 'r_admin_notices' );
 add_action( 'wp_ajax_r_dismiss_pending_recipe_notice', 'r_dismiss_pending_recipe_notice' );
+add_action( 'plugins_loaded', 'r_load_textdomain' );
 
 // Shortcodes
 add_shortcode( 'recipe_creator', 'r_recipe_creator_shortcode' );
